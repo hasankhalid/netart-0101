@@ -24,7 +24,7 @@ function createSideBar() {
     text2.classList.add('lato');
     let link2 = bottomDiv.appendChild(document.createElement('a'));
     link2.innerHTML = 'Back to the beginning';
-    link2.setAttribute("href", "/"); 
+    link2.setAttribute("href", "https://hasankhalid.github.io/netart-0101/week_two/index.html"); 
     link2.classList.add('beginning');
     link2.classList.add('lato');
 }
