@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poiret+One&family=Press+Start+2P&family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script>
+    <script src="./scripts/repeat.js"></script>
+    <script src="./scripts/typewriter.js"></script>
+    <title>Week Two: Pep Talk (Text Adventure)</title>
+</head>
+<body>
+    <main id="main_container">
+        <div class="content_container full_height" id="content_container">
+            <div class="content_padding centered_content full_height">
+                <p id="typewriter" class="lato typewriter_text handwriting"></p>
+            </div>
+            <img src="https://i.pinimg.com/originals/bc/bb/27/bcbb279dee67e5a9d6a22238977a1591.gif" class="happy_doggo" id="happy_doggo" alt="What's better than a happy doggo to make all of us happy?"></img>
+            <a href="./stage5.html" aria-label="Look into the sky......Those stars shine for youu! You will be alright." class="image_link_container">
+                <img src="./media/stage4.jpg" class="image_link" alt="Click the window to go to the next stage"></img>
+            </a>
+            <div id="particles-js"></div>
+        </div>
+    </main>
+    <script>
+        createSideBar();
+        let txt = 'Look into the sky......Those stars shine for youu! You will be alright.'; /* The text */
+        runTypeWriter('stage4');
+        doggo();
+    </script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            particlesJS.load('particles-js', './media/assets/particles4.json', function() {});
+        });
+    </script>
+
+</body>
+</html>

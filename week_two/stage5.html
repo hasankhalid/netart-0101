@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poiret+One&family=Press+Start+2P&family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="./scripts/repeat.js"></script>
+    <script src="./scripts/typewriter.js"></script>
+    <title>Week Two: Pep Talk (Text Adventure)</title>
+</head>
+<body>
+    <main id="main_container">
+        <div class="content_container full_height" id="content_container">
+            <div class="content_padding centered_content full_height">
+                <p id="typewriter" class="lato typewriter_text handwriting"></p>
+                <a aria-label="The sun will shine tomorrow..... You'll shine in that light" href="./stage6.html" class="sun_button" id="sun_button"></a>
+            </div>
+            <img src="https://i.pinimg.com/originals/bc/bb/27/bcbb279dee67e5a9d6a22238977a1591.gif" class="happy_doggo" id="happy_doggo" alt="What's better than a happy doggo to make all of us happy?"></img>
+        </div>
+    </main>
+    <script>
+        createSideBar();
+        let txt = "The sun will shine tomorrow..... You'll shine in that light"; /* The text */
+        runTypeWriter('stage5');
+        doggo();
+    </script>
+
+</body>
+</html>

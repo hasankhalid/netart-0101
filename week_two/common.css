@@ -1,0 +1,337 @@
+@font-face {
+    font-family: LoveloBlack;
+    src: url('./media/fonts/Lovelo-Black.otf');
+}
+
+@font-face {
+    font-family: LoveloLineBold;
+    src: url('./media/fonts/Lovelo-LineBold.otf');
+}
+
+@font-face {
+    font-family: LoveloLineLight;
+    src: url('./media/fonts/Lovelo-LineLight.otf');
+}
+
+body, html {
+    box-sizing: border-box;
+    margin: 0px;
+    width: 100vw;
+}
+
+p, a {
+    margin: 0px;
+}
+
+.LoveloLineLight {
+    font-family: 'LoveloLineLight', sans-serif;
+}
+
+.LoveloLineBold {
+    font-family: 'LoveloLineBold', sans-serif;
+}
+
+.LoveloBlack {
+    font-family: 'LoveloBlack', sans-serif;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.handwriting {
+    font-family: 'Indie Flower', cursive;
+}
+
+.full_height {
+    height: 100%;
+}
+
+#main_container {
+    background-image: linear-gradient(to right bottom, #071411, #0b0f08, #0c0904, #080403, #000000);
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.content_container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.content_padding {
+    padding: 0px 80px;
+    box-sizing: border-box;
+}
+
+.centered_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.side_bar_container {
+    background-color: #030F0C;
+    border-color: #009674;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-right: 1px dashed #02513f;
+}
+
+.side_bar_text {
+    writing-mode: tb;
+    transform: rotate(180deg);
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+	transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    font-size: 0.95rem;
+    color: #02513f;
+}
+
+.side_bar_text:hover {
+    letter-spacing: 22px;
+    color: #048466;
+}
+
+.absolute_bottom_div {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+.net_art_div {
+    display: flex;
+    align-items: center;
+}
+
+.net_art {
+    font-family: 'Press Start 2P', cursive;
+    background-image: linear-gradient(to right bottom, #cb1de2, #ff0091, #ff5a40, #ffab00, #c5e516);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.fall {
+    font-size: 0.9rem;
+    color: #035f4a;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.beginning {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    text-decoration: none;
+    color: #035f4a;
+}
+
+.beginning:hover {
+    letter-spacing: 3px;
+    color: #048466;
+}
+
+.typewriter_text {
+    width: 45%;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.happy_doggo {
+    position: absolute;
+    bottom: 35px;
+    left: 40px;
+    width: 150px;
+    border-radius: 30px;
+    transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    opacity: 0;
+}
+
+.doggo_appear {
+    opacity: 1;
+    transform: translateY(-25px);
+    border-radius: 50px;
+}
+
+.image_link_container {
+    position: absolute;
+    left: 50%;
+    width: 325px;
+    height: 60vh;
+    top: 20vh;
+    filter: brightness(0.7);
+	transition: 0.7s cubic-bezier(0.5, 0, 0.75, 0);
+    overflow: hidden;
+    border: 1px dashed rgba(255,255,255,0);
+    z-index: 2;
+}
+
+.image_link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.image_link_container:hover {
+    transform: scale(1.15);
+    filter: brightness(0.93);
+    border: 1px dashed #035f4a;
+}
+
+.sun_button {
+    width: 250px;
+    height: 250px;
+    background-image: radial-gradient(circle, #ffeb3b, #ffda31, #ffc92a, #fcb926, #f9a825);;
+    position: absolute;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+    border-radius: 50%;
+    filter: blur(75px) brightness(0.5);
+    transition: 0.7s cubic-bezier(0.5, 0, 0.75, 0);
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 2;
+}
+
+.sun_appear {
+    opacity: 0.9;
+    transform: scale(1);
+}
+
+.sun_button:hover {
+    transform: scale(1.3);
+    filter: blur(75px) brightness(0.8);
+}
+
+.buttons_container {
+    margin-top: 60px;
+    display: flex;
+    opacity: 0;
+    transition: 0.75s cubic-bezier(0.5, 0, 0.75, 0);
+}
+
+.button {
+    margin: 0px 20px;
+    width: 100px;
+    background: none;
+    border: none;
+    position: relative;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button > a, .button_text {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.button > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button_circle {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    background-color: #8E24AA;
+    border-radius: 50%;
+    filter: blur(15px);
+    transition: 0.3s cubic-bezier(0.5, 0, 0.75, 0);
+}
+
+.button:hover > .button_circle {
+    transform: scale(1.2);
+    background-color: #F9A825;
+}
+
+.buttons_appear {
+    transform: translateY(-20px);
+    opacity: 1;
+}
+
+#particles-js {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.home_button {
+    opacity: 1;
+}
+
+@media screen and (max-width: 675px) {
+    .net_art {
+        font-size: 0.75rem;
+    }
+    .fall {
+        display: none;
+    }
+    .side_bar_container {
+        display: none;
+    }
+    .content_padding {
+        padding: 0px 50px;
+    }
+    .absolute_bottom_div {
+        padding: 0px 20px;
+    }
+    .typewriter_text {
+        width: 55%;
+        font-size: 1.2rem;
+    }
+    .image_link_container {
+        width: 42%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
