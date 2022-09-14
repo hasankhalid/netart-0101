@@ -3,8 +3,7 @@ function createSideBar() {
     sideBarDiv.classList.add('side_bar_container');
     let link = sideBarDiv.appendChild(document.createElement('a'));
     link.innerHTML = "Hasan Khalid";
-    link.classList.add('side_bar_text');
-    link.classList.add('lato');
+    addMultipleClasses(link, ['side_bar_text', 'lato']);
     link.setAttribute("href", "https://hasankhalid.github.io/netart-0101/index.html"); 
 
     let bottomDiv = document.getElementById('content_container').appendChild(document.createElement('div'));
@@ -20,13 +19,11 @@ function createSideBar() {
     })
     let text2 = netArt.appendChild(document.createElement('p'));
     text2.innerHTML = 'Fall 2022 | Week 2';
-    text2.classList.add('fall');
-    text2.classList.add('lato');
+    addMultipleClasses(text2, ['fall', 'lato']);
     let link2 = bottomDiv.appendChild(document.createElement('a'));
     link2.innerHTML = 'Back to the beginning';
     link2.setAttribute("href", "https://hasankhalid.github.io/netart-0101/week_two/index.html"); 
-    link2.classList.add('beginning');
-    link2.classList.add('lato');
+    addMultipleClasses(link2, ['beginning', 'lato']);
 }
 
 function doggo() {
@@ -36,4 +33,10 @@ function doggo() {
     document.getElementById('net_art').addEventListener('mouseout', function() {
         document.getElementById('happy_doggo').classList.remove('doggo_appear');
     });
+}
+
+function addMultipleClasses(el, arr) {
+    for ( let i = 0 ; i < arr.length ; i++) {
+        el.classList.add(arr[i]);
+    }
 }

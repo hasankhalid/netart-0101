@@ -1,5 +1,5 @@
 let i = 0;
-let speed = 75; /* Duration per character in ms */
+let speed = 70; /* Duration per character in ms */
 
 function runTypeWriter() {
     if (i < txt.length) {
