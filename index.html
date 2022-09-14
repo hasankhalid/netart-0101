@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Hasan's net art portal</title>
-</head>
-<body>
-    <section class="main_page">
-        <main>
-            <h1> Welcome 2 Hasan's Page</h1>
-        <ul>
-            <li> <a href="./week_one/ideas.html"> week one: brainstorm session</a></li>
-            <li> <a href="./week_two/index.html"> week two: text adventure</a></li>
-        </ul>
-        </main>
-    </section>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Hasan's net art portal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poiret+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <section class="main_page">
+            <section class="page_content">
+                <main>
+                    <h1 class="net_art_title">Hasan's Net Art Universe</h1>
+
+                    <div id="navigation_container">
+
+                    </div>
+                </main>
+            </section>
+            <canvas class="granim_gradient" id="canvas-basic"></canvas>
+        </section>
+
+
+        <script>
+            var granimInstance = new Granim({
+                element: '#canvas-basic',
+                direction: 'left-right',
+                isPausedWhenNotInView: true,
+                states : {
+                    "default-state": {
+                        gradients: [
+                            ['#071411', '#600937'],
+                            ['#670F2D', '#071411'],
+                            ['#071411', '#054A3E']
+                        ]
+                    }
+                }
+            });
+
+            let navigationData = [{
+                "title": "Brainstorm Session",
+                "link": "./week_one/ideas.html"
+            }, {
+                "title": "Text Adventure",
+                "link": "./week_two/index.html"                
+            }]
+
+            generateNav(navigationData);
+        </script>
+    </body>
 </html>
