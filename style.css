@@ -74,14 +74,11 @@ h1, h2, h3, h4, h5, p, a {
     transition: 0.3s ease-in;
     text-decoration: none;
   }
-  
-  .navItem_anchor:hover {
-    color: black;
-  }
+
 
   .underline {
-    background-image: -o-linear-gradient(330deg, #FFEB3B 0%, #FFEB3B 100%);
-    background-image: linear-gradient(120deg, #FFEB3B 0%, #FFEB3B 100%);
+    background-image: -o-linear-gradient(330deg, #BA68C8    0%, #8E24AA    100%);
+    background-image: linear-gradient(120deg, #BA68C8 0%, #8E24AA 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.06em;
     background-position: 0 88%;
