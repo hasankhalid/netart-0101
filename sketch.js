@@ -15,19 +15,14 @@ function draw() {
         push();
             for (let x = startX; x < width; x+=20) {
                 for (let y = startY; y < height; y+=20) {
+                    let mappingVar = x + y;
+                    let op = map(mappingVar, startX + startY, width + height, 0, 200);
+                    noStroke();
+                    fill(255, 255, 255, op);
                     circle(x, y, 15, 15);
                 }
             }
         pop();
     pop();
 
-}
-
-class CustomCircle {
-    constructor(w, h, x, y) {
-        this.x = x; 
-        this.y = y; 
-        this.w = w; 
-        this.h = h;
-    }
 }
