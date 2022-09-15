@@ -8,6 +8,8 @@ function setup() {
 function draw() {
     let startY = window.innerHeight/10;
     let startX = window.innerWidth/1.5;
+
+    if (window.)
     resizeCanvas(window.innerWidth, window.innerHeight);
 
     push();
