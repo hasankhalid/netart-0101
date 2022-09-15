@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5, p, a {
     align-items: center;
     flex-grow: 1;
     z-index: 2;
+    padding: 0px 80px;
+    box-sizing: border-box;
 }
 
 .net_art_title {
@@ -43,6 +45,7 @@ h1, h2, h3, h4, h5, p, a {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2rem;
+    text-align: center;
 }
 
 .navItem {
@@ -58,7 +61,7 @@ h1, h2, h3, h4, h5, p, a {
         -ms-flex-direction: column;
             flex-direction: column;
   
-  }
+}
 
   .navItem_anchor {
     font-size: 1.6rem;
@@ -95,4 +98,43 @@ h1, h2, h3, h4, h5, p, a {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
+
+  .p5Canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 0.2;
+  }
+
+  .front_content {
+    position: relative;
+    z-index: 2;
+  }
+
+@media screen and (max-width: 900px) {
+  .navItem_anchor {
+    font-size: 1.3rem;
+  }
+  .navItem {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+    .net_art_title {
+        font-size: 1.45rem;
+        line-height: 2rem;
+    }
+    .page_content {
+        padding: 0px 40px;
+    }
+    .navItem_anchor {
+        font-size: 1.3rem;
+    }
+    .navItem {
+        padding: 4px 20px;
+    }
+}
