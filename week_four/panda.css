@@ -1,0 +1,224 @@
+#panda {
+    position: relative;
+    padding-top: 2.75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panda_face {
+    width: 16vw;
+    padding-top: 85%;
+    background-color: white;
+    border-radius: 90% 90% 74% 74%;
+    position: relative;
+    z-index: 2;
+    transition: 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.panda_eye {
+    position: absolute;
+    width: 33%;
+    padding-top: 40%;
+    top: 25%;
+    background-color: black;
+}
+
+.left_eye {
+    left: 10%;
+    border-radius: 60% 40% 55% 40%;
+    transform: rotate(15deg);
+    transition: 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.right_eye {
+    right: 10%;
+    border-radius: 40% 60% 40% 55%;
+    transform: rotate(-15deg);
+    transition: 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.eye_ball {
+    position: absolute;
+    width: 20%;
+    padding-top: 20%;
+    top: 20%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.left_eye_ball {
+    right: 20%;
+}
+
+.right_eye_ball {
+    left: 20%;
+}
+
+.panda_nose {
+    position: absolute;
+    top: 65%;
+    width: 0px; 
+    height: 0px;
+    left: calc(50% - 1.2vw); 
+    border-left: 1.2vw solid transparent;
+    border-right: 1.2vw solid transparent;
+    border-top: 1.2vw solid #000;
+    border-radius: 49%;
+}
+
+.panda_ear {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    background-color: black;
+    border-radius: 50%;
+    top: 0px;
+    z-index: 1;
+}
+
+.left_ear {
+    left: -1%;
+    transition: 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.right_ear {
+    right: -1%;
+    transition: 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.shadow {
+    background-color: #000;
+    width: 10vw;
+    height: 7px;
+    border-radius: 50%;
+    margin-top: 5vh;
+    filter: blur(13px);
+    transition: 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.panda_animate {
+    animation-duration: 2.25s;
+    animation-name: pandaJump;
+    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.panda_animate .panda_face {
+    border-radius: 100% 100% 90% 90%;
+}
+
+.panda_animate .left_ear {
+    left: 2%;
+}
+
+.panda_animate .right_ear {
+    right: 2%;
+}
+
+.animate_circle {
+    animation-duration: 3s;
+    animation-name: animateBackground;
+    animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);;
+}
+
+.panda_animate .shadow {
+    transform: scaleX(0.8);
+} 
+
+@keyframes pandaJump {
+    from {
+        transform: translateY(0px) scaleX(1) scaleY(1);
+    }
+  
+    50% {
+        transform: translateY(-16vh) scaleX(0.9) scaleY(1.05);
+    }
+
+    to {
+        transform: translateY(0px) scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes animateBackground {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(15);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .panda_face {
+        width: 22vw;
+    }
+    .panda_ear {
+        width: 9vw;
+        height: 9vw;
+    }
+    .panda_nose {
+        border-radius: 48%;
+    }
+    .title {
+        font-size: 6.5rem;
+        letter-spacing: 1rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .title {
+        font-size: 5.5rem;
+        letter-spacing: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .panda_face {
+        width: 28vw;
+    }
+    .panda_ear {
+        width: 12vw;
+        height: 12vw;
+    }
+    .panda_nose {
+        border-radius: 47%;
+    }
+    .panda_nose {
+        left: calc(50% - 2vw); 
+        border-left: 2vw solid transparent;
+        border-right: 2vw solid transparent;
+        border-top: 2vw solid #000;
+    }
+    .title {
+        font-size: 3.5rem;
+        letter-spacing: 0.7rem;
+        -webkit-text-stroke: 1px #000;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .panda_face {
+        width: 40vw;
+    }
+    .panda_ear {
+        width: 19vw;
+        height: 19vw;
+        top: -11%;
+    }
+    .panda_nose {
+        border-radius: 47%;
+    }
+    .panda_nose {
+        left: calc(50% - 3vw); 
+        border-left: 3vw solid transparent;
+        border-right: 3vw solid transparent;
+        border-top: 3vw solid #000;
+    }
+    .title {
+        font-size: 2.5rem;
+        letter-spacing: 0.4rem;
+        -webkit-text-stroke: 1px #000;
+        top: 3vh;
+    }
+}
