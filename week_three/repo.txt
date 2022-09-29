@@ -1,0 +1,3 @@
+Find the code for week3 at https://github.com/hasankhalid/portfolio_code_netart
+
+The project can be accessed at https://port-theme.web.app/
