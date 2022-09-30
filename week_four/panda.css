@@ -149,6 +149,16 @@
     }
 }
 
+@keyframes animateBackgroundMobile {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(27);
+    }
+}
+
 @media screen and (max-width: 1250px) {
     .panda_face {
         width: 22vw;
@@ -217,8 +227,14 @@
     }
     .title {
         font-size: 2.5rem;
-        letter-spacing: 0.4rem;
-        -webkit-text-stroke: 1px #000;
+        letter-spacing: 0.25rem;
+        -webkit-text-stroke: 2px #000;
         top: 3vh;
+    }
+    .bottom_controls {
+        bottom: 12vh;
+    }
+    .animate_circle {
+        animation-name: animateBackgroundMobile;
     }
 }
